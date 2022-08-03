@@ -1,0 +1,22 @@
+li{
+    display: flex;
+}
+
+button{
+    margin: 0;
+    padding: 5px 20px;
+    text-align: start;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+button:hover{
+    cursor: pointer;
+    color: #f1f1f5;
+    background-color: #333;
+}
+
+button:active{
+    padding-top: 7px;
+    padding-bottom: 3px;
+}
