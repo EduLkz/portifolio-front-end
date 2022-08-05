@@ -7,7 +7,8 @@ button{
     padding: 5px 20px;
     text-align: start;
     cursor: pointer;
-    border-radius: 10px;
+    border: none;
+    border-radius: 2px;
 }
 
 button:hover{

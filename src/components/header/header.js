@@ -35,20 +35,14 @@ function reducerFunction(state, action){
   }
 }
 
-
 function Header() {
-  
-  const [page, setPage] = useState('home');
-  const [state, dispatch] = useReducer(reducerFunction, initialPage);
-  
   return (
     <div className='Header'>
         <nav>
             <li>
-                <ul><button onClick={() => {dispatch({type: pageHome})}}>Inicio</button></ul>
-                <ul><button onClick={() => {dispatch({type: pageGames})}}>Jogos</button></ul>
-                <ul><button onClick={() => {dispatch({type: pageProjects})}}>Projetos</button></ul>
-                <ul><button onClick={() => {dispatch({type: pageAbout})}}>Sobre</button></ul>
+                <ul><button>Inicio</button></ul>
+                <ul><button>Jogos</button></ul>
+                <ul><button>Projetos</button></ul>
             </li>
         </nav>
     </div>

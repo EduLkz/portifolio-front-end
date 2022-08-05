@@ -1,4 +1,4 @@
-.game-list{
+.repo-list{
     background-color: wheat;
     padding: 15px;
     padding-left: 12%;
@@ -7,7 +7,7 @@
     margin: 0;
 }
 
-.game{
+.repo{
     display: flex;
     flex-direction: row;
 
@@ -19,7 +19,7 @@
     padding: 10px;
 }
 
-.game-cover{
+.repo-cover{
     margin: 10px;
     width: 150px;
     border-radius: 5px;
@@ -27,13 +27,13 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.466);
 }
 
-.game-info{
+.repo-info{
     display: flex;
     flex-direction: column;
     text-align: left;
 }
 
-.game-info button{
+.repo-info button{
     width: 200px;
     margin-bottom: 5px;
     text-align: center;
@@ -42,18 +42,18 @@
     font-weight: 300;
 }
 
-.game-title{
+.repo-title{
     font-size: 155%;
     font-weight: 700;
     margin: 10px 0;
 }
 
-.game-description{
+.repo-description{
     color: #1a1a3a;
     margin: 0;
 }
 
-.game-published-at{
+.repo-published-at{
     color: #3a3a5a;
     font-size: 80%;
     margin: 0;
