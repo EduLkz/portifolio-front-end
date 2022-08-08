@@ -9,13 +9,31 @@ function RepositoriesList( {repos} ) {
         return <Repo {...repo}/>
     }
 
+    const r = [
+        {
+            name: 'Repository name',
+            html_url: 'https://www.youtube.com/',
+            description: 'repository teste',
+            created_at: '01-01-2022',
+            language: 'javascript'
+        },
+        {
+            name: 'Repository No description',
+            html_url: 'https://www.youtube.com/',
+            created_at: '01-01-2022',
+            language: 'typescript'
+        }
+    ]
+
     return (
         <div className='repo-list'>
+            <Repo {...r[0]}/>
+            
             {
-                reposList &&
-                (reposList.map((repo) => {
-                    return RenderRepos(repo);
-                }))
+                // r &&
+                // (r.map((repo) => {
+                //     return RenderRepos(repo);
+                // }))
                 
             }
         </div>

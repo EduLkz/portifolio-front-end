@@ -18,7 +18,7 @@ function App() {
   }
 
   useEffect(() => {
-    waitForApi();
+    //waitForApi();
   }, [])
 
   return (
@@ -35,7 +35,10 @@ function App() {
               )}
             </Route>
             <Route path='/projects'>
-              <h1>  REPOS </h1>
+              <RepositoriesList/>
+              {/* {(apiData) && (
+                <RepositoriesList {...apiData}/>
+              )} */}
             </Route>
           </Switch>
           
