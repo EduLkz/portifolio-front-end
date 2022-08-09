@@ -2,7 +2,7 @@ li{
     display: flex;
 }
 
-button{
+Link{
     margin: 0;
     padding: 5px 20px;
     text-align: start;
@@ -11,13 +11,13 @@ button{
     border-radius: 2px;
 }
 
-button:hover{
+Link:hover{
     cursor: pointer;
     color: #f1f1f5;
     background-color: #333;
 }
 
-button:active{
+Link:active{
     padding-top: 7px;
     padding-bottom: 3px;
 }

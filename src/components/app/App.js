@@ -34,7 +34,7 @@ function App() {
                 <GameList {...apiData}/>
               )}
             </Route>
-            <Route path='/projects'>
+            <Route path='/repositories'>
               <RepositoriesList/>
               {/* {(apiData) && (
                 <RepositoriesList {...apiData}/>
