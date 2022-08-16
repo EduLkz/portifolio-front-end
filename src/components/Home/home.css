@@ -1,0 +1,58 @@
+.home{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.my-info{
+    margin: 25px 10%;
+}
+
+.about-me{
+    text-align: justify;
+}
+
+.pfp{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 1em #557;
+}
+
+.home-nav{
+    margin: 15px;
+}
+
+.home-nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.home-nav button{
+    padding: 5px 20px;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.home-nav button:hover{
+    background-color: #9744a1;
+    color: #e9fbff;
+}
+
+.home-nav button:active{
+    background-color: #132b99;
+    color: #dfbee9;
+    padding-top: 8px;
+    padding-bottom: 2px;
+}
+
+.info-page{
+    background-color: #dfbee9;
+    width: 100%;
+    margin: 0;
+    flex-grow: 1;
+}

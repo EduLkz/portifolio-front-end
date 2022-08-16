@@ -1,10 +1,14 @@
 import './App.css';
-import Header from '../header/header';
-import GameList from '../GameList/gameList';
+
 import { useEffect, useState } from 'react';
 import { getAPIdata } from '../../Services/api/api';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
+import Header from '../Header/header';
+import Home from '../Home/home';
+import GameList from '../GameList/gameList';
 import RepositoriesList from '../RepositoriesList/repositoriesList';
+
 
 function App() {
 
@@ -28,7 +32,10 @@ function App() {
 
         <div className='content'>
           <Switch>
-            <Route exact path='/'><h1>HOME</h1></Route>
+            <Route exact path='/'>
+              <Home />
+            </Route>
+            
             <Route path='/games'>
               {(apiData) && (
                 <GameList {...apiData}/>

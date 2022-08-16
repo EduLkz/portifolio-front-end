@@ -1,23 +1,26 @@
-li{
+.Header li{
     display: flex;
+    background-color: #333;
 }
 
-Link{
+.router-link{
     margin: 0;
     padding: 5px 20px;
     text-align: start;
     cursor: pointer;
     border: none;
     border-radius: 2px;
-}
-
-Link:hover{
-    cursor: pointer;
     color: #f1f1f5;
-    background-color: #333;
+    text-decoration: none;
 }
 
-Link:active{
+.router-link:hover{
+    cursor: pointer;
+    color: #1f1f2f;
+    background-color: #a3a3a3;
+}
+
+.router-link:active{
     padding-top: 7px;
     padding-bottom: 3px;
 }

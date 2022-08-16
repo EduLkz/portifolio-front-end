@@ -1,0 +1,38 @@
+.experience{
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.experience-card{
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+    
+    margin: 20px 10% 25px 10%;
+    padding: 0 10px 5px 15px;
+    
+    border-left: 3px #7e2d63 solid;
+}
+
+.date{
+    margin: 0 50px 0 0;
+}
+
+.role-info p{
+    margin: 0;
+}
+
+.role-description{
+    font-size: 120%;
+    font-weight: bold;
+}
+
+.resp{
+    margin-top: 3px ;
+    margin-left: 25px;
+    color: #31313d;
+    list-style: square;
+}

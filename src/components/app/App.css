@@ -1,4 +1,9 @@
 .App {
+  height: 100%;
   text-align: center;
   margin: 0;
+}
+
+.content{
+  height: 100%;
 }

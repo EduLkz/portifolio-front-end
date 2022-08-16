@@ -7,9 +7,9 @@ function Header() {
     <div className='Header'>
         <nav>
             <li>
-                <ul><Link to='/'>Inicio</Link></ul>
-                <ul><Link to='/games'>Jogos</Link></ul>
-                <ul><Link to='/repositories'>Repositorios</Link></ul>
+                <ul><Link to='/' className='router-link'>Inicio</Link></ul>
+                <ul><Link to='/games' className='router-link'>Jogos</Link></ul>
+                <ul><Link to='/repositories' className='router-link'>Repositorios</Link></ul>
             </li>
         </nav>
     </div>
