@@ -1,0 +1,41 @@
+.user{
+    display: flex;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 45px;
+}
+
+.userAvatar{
+    width: 200px;
+    margin-right: 25px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 1em #29262681;
+}
+
+.user-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.user-info a{
+    text-align: right;
+    text-decoration: none;
+}
+
+span{ margin: 0; }
+h2 { margin: 0; margin-bottom: 10px;}
+
+@media (max-width: 650px){
+    .user{
+        flex-direction: column;
+        margin-left: 20%;
+    }
+
+    .userAvatar{
+        margin: 0;
+        margin-left: 20%;
+    }
+
+}

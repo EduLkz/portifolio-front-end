@@ -4,29 +4,13 @@ import './mainSkills.css'
 const MainSkills = () => {
 
     const skills = [
-        {
-            skill: 'Java',
-            level: 1
-        },{
-            skill: 'HTML/CSS',
-            level: 1
-        },{
-            skill: 'Python',
-            level: 0
-        },{
-            skill: 'Typescript',
-            level: 1
-        },{
-            skill: 'ReactJS',
-            level: 1
-        },{
-            skill: 'React Native',
-            level: 1
-        },{
-            skill: 'Unity',
-            level: 2
-        },
-
+        { skill: 'Java', level: 2 },
+        { skill: 'HTML/CSS', level: 3 },
+        { skill: 'Python', level: 0 },
+        { skill: 'Typescript', level: 1 },
+        { skill: 'ReactJS', level: 2 },
+        { skill: 'React Native', level: 2 },
+        { skill: 'Unity', level: 4 },
     ]
 
     return (

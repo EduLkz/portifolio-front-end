@@ -1,45 +1,36 @@
 import { API_ADDRES } from '../../settings/settings';
+import DefaultResponse from '../../settings/deafultApi.json'
 
-var apidata;
-var user;
-var games;
-var repos;
+var apidata = DefaultResponse;
+var responseFromApi = false;
 
+const getAPIdata = async(timeoutDuration) => {
+    if(responseFromApi === false){
+        let response;
+        try{
+            response = await fetch(`${API_ADDRES}/portifolio`, {
+                method: 'GET',
+                timeout: {timeoutDuration}
+            })
 
-const getAPIdata = async() => {
-    if(!apidata){
-        const response = await fetch(`${API_ADDRES}/portifolio`, {
-            method: 'GET'
-        })
-        
-        const data = await response.json();
-        
-        apidata = await data;
-        user = await data.user;
-        games = await data.games;
-        repos = await data.repos;
-    
+            const data = await response.json();
+            
+            apidata = data;
+            responseFromApi = true;
+        }catch(e){
+            console.error('Error trying to get api: ' + e + '\nSending default response');
+        }
+
         return apidata;
     }
 }
 
-
-const getUserData = () => {
-    if(user){
-        return user;
-    }
+const getResponseFromApi = () => {
+    return responseFromApi;
 }
 
-const getGamesData = () => {
-    if(games){
-        return games;
-    }
+const getDefaultResponse = () => {
+    return DefaultResponse;
 }
 
-const getReposData = () => {
-    if(repos){
-        return repos;
-    }
-}
-
-export { getAPIdata, getUserData, getGamesData, getReposData }
+export { getAPIdata, getResponseFromApi, getDefaultResponse }

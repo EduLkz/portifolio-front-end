@@ -1,6 +1,14 @@
+.Header nav{
+    background-color: #333;
+}
+
 .Header li{
     display: flex;
-    background-color: #333;
+    margin-left: 15px;
+}
+
+.Header ul{
+    padding: 0;
 }
 
 .router-link{

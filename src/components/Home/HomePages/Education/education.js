@@ -23,7 +23,12 @@ const EducationCard = (props) => {
                 <p className="info">
                     <span className="type">{type}</span>&emsp;
                     <span className="date">{date}</span>
-                </p>                
+                </p>
+                <p>
+                    <a  target='_blank'  rel="noreferrer" href='http://www.fateccarapicuiba.edu.br/wp-content/uploads/2019/05/Jogos-Digitais_CA_2013-CESU.pdf'>
+                    Saiba mais...
+                    </a>
+                </p>
             </div>
         </div>
     )

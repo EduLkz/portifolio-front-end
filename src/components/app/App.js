@@ -1,29 +1,30 @@
 import './App.css';
 
 import { useEffect, useState } from 'react';
-import { getAPIdata } from '../../Services/api/api';
-import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { getAPIdata, getDefaultResponse } from '../../Services/api/api';
 
 import Header from '../Header/header';
 import Home from '../Home/home';
-import GameList from '../GameList/gameList';
-import RepositoriesList from '../RepositoriesList/repositoriesList';
+import ProjectsPage from '../ProjectsPage/projectsPage';
 
 
 function App() {
 
-  const [apiData, setApiData] = useState();
+  const [apiData, setApiData] = useState(getDefaultResponse);
 
-  const waitForApi = async() => {
-    if(!apiData){
-      const apireturn = await getAPIdata();
-      setApiData(apireturn);
-    }
-  }
+  
 
   useEffect(() => {
-    //waitForApi();
-  }, [])
+    const waitForApi = async() => {
+      if(!apiData){
+        const apireturn = await getAPIdata(5000);
+        setApiData(apireturn);
+      }
+    }
+    
+    waitForApi();
+  }, [apiData])
 
   return (
     <Router>
@@ -32,21 +33,8 @@ function App() {
 
         <div className='content'>
           <Switch>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            
-            <Route path='/games'>
-              {(apiData) && (
-                <GameList {...apiData}/>
-              )}
-            </Route>
-            <Route path='/repositories'>
-              <RepositoriesList/>
-              {/* {(apiData) && (
-                <RepositoriesList {...apiData}/>
-              )} */}
-            </Route>
+            <Route exact path='/'> <Home /> </Route>
+            <Route path='/projects'> <ProjectsPage data={apiData}/> </Route>
           </Switch>
           
         </div>

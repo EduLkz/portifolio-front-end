@@ -1,12 +1,14 @@
+import { SKILL_LEVEL } from "../../../../Services/skillsLeves";
+
 const Softwares = () => {
 
     const softwareKnow = [
-        'Microsoft Office',
-        'Microsoft Windows',
-        'Unity',
-        'Blender',
-        'Adobe Photoshop',
-        'VS Code'
+        { name: 'Microsoft Office', level: 2 },
+        { name: 'Microsoft Windows', level: 3 },
+        { name: 'Unity', level: 4 },
+        { name: 'Blender', level: 2 },
+        { name: 'Adobe Photoshop', level: 1 },
+        { name: 'VS Code', level: 1 },
     ]
 
     return(
@@ -14,11 +16,15 @@ const Softwares = () => {
             <h3>
                 Softwares
             </h3>
-            <ul>
+            <table>
                 {softwareKnow.map((sk) => {
-                    return <li>{sk}</li>
-                })}
-            </ul>
+                    return (
+                        <tr id={`software${sk.name}`}>
+                            <td>{sk.name}</td>
+                            <td>{SKILL_LEVEL(sk.level)}</td>
+                        </tr>
+                )})}
+            </table>
         </div>
     )
 }

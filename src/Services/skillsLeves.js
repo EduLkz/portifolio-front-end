@@ -4,8 +4,12 @@ export const SKILL_LEVEL = (level) => {
         case 0:
             return 'Iniciante';
         case 1:
-            return 'Intermediario';
+            return 'Iniciante/Intermediario';
         case 2:
+            return 'Intermediario'
+        case 3:
+            return 'Intermediario/Intermediario';
+        case 4:
             return 'Avançado'
     }
 }

@@ -8,8 +8,7 @@ function Header() {
         <nav>
             <li>
                 <ul><Link to='/' className='router-link'>Inicio</Link></ul>
-                <ul><Link to='/games' className='router-link'>Jogos</Link></ul>
-                <ul><Link to='/repositories' className='router-link'>Repositorios</Link></ul>
+                <ul><Link to='/projects' className='router-link'>Projetos</Link></ul>
             </li>
         </nav>
     </div>

@@ -1,0 +1,52 @@
+.projects, .project-wrapper{
+    height: 100%;
+}
+
+.proj-nav{
+    margin: 0px;
+    margin-top: 15px;
+    padding: 1px 0;
+}
+
+.proj-nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.proj-nav button{
+    padding: 5px 20px;
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.proj-nav button:hover{
+    background-color: #9744a1;
+    color: #e9fbff;
+}
+
+.proj-nav button:active{
+    background-color: #132b99;
+    color: #dfbee9;
+    padding-top: 8px;
+    padding-bottom: 2px;
+}
+
+.nav-games{
+    background-color: #ec6678;
+    border-top: 5px #792020 solid;
+}
+
+.nav-repos{
+    background-color: #3a44a1;
+    border-top: 5px #173864 solid;
+    color: white;
+}
+
+.nav-studies{
+    background-color: #a55b99;
+    border-top: 5px #79255d solid;
+    color: white;
+}
