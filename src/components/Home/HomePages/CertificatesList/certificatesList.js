@@ -6,7 +6,7 @@ const CertificatesList = () => {
   return (
     <div className="certicates-list">
         {certificates.map((c) => {
-            return( <Certificate {...c} />)
+            return( <Certificate {...c} key={c.name}/>)
         })}
     </div>
   );

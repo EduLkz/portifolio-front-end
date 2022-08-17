@@ -4,11 +4,11 @@
 }
 
 .repo-list{
+    margin: 0 12%;
     padding: 15px 20px;
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
 }
 
 .repo{
@@ -18,7 +18,10 @@
     background-color: #335;
     border: 2px #e1e1ff solid;
     border-radius: 2px;
+    
     width: 400px;
+    height: 140px;
+    
     margin: 5px;
     padding: 15px;
     color: white;

@@ -15,6 +15,13 @@
     margin-right: 10%;
 }
 
+.about-me a{
+    color: #353555;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .pfp{
     width: 200px;
     height: 200px;
@@ -58,4 +65,81 @@
     width: 100%;
     margin: 0;
     flex-grow: 1;
+}
+
+
+.social{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30%;
+    max-width: 400px;
+}
+
+.social img{
+    background-color: #557;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    animation-name: social-idle;
+    animation-duration: .25s;
+}
+
+.social img:hover{
+    background-color: #742b2b;
+    padding: 8px;
+
+    animation-name: social-hover;
+    animation-duration: .25s;
+}
+
+.pages{
+    animation-name: fade-in;
+    animation-duration: 1s;
+}
+
+@keyframes fade-in{
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes social-hover{
+    from { padding: 5px; }
+    to { padding: 8px; }
+}
+
+@keyframes social-idle{
+    from { padding: 8px; }
+    to { padding: 5px; }
+}
+
+
+@media (max-width: 645px){
+    .home-nav{
+        margin: 0px;
+    }
+    .home-nav ul{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .home-nav button{
+        padding: 5px 10px;
+    }
+}
+
+@media (max-width: 415px){
+    .home-nav{
+        margin: 0px;
+    }
+    .home-nav ul{
+        margin: 0;
+        padding: 0;
+        justify-content: space-evenly;
+    }
+    
+    .home-nav button{
+        padding: 5px 2px;
+    }
 }

@@ -12,8 +12,9 @@ const UserInfo = ( props ) => {
         <div className="user">
             <img className='userAvatar' src={user.avatar_url} alt='user avatar'/>
             <div className="user-info">
-                <span>User: </span><h2 className='Login'>{user.login}</h2>
-                <p className='Bio'>{user.bio}</p>
+                <span>User: </span><h2 className='login'>{user.login}</h2>
+                <p>Git bio:</p>
+                <p className='bio'>{user.bio}</p>
                 <div className="links">
                     <p>Github: &ensp; 
                         <a href={git_url} target='_blank' rel="noreferrer">{git_url}</a>

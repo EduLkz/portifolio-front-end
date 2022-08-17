@@ -1,4 +1,5 @@
 import { SKILL_LEVEL } from "../../../../Services/skillsLeves";
+import './softwares.css'
 
 const Softwares = () => {
 
@@ -16,14 +17,16 @@ const Softwares = () => {
             <h3>
                 Softwares
             </h3>
-            <table>
-                {softwareKnow.map((sk) => {
-                    return (
-                        <tr id={`software${sk.name}`}>
-                            <td>{sk.name}</td>
-                            <td>{SKILL_LEVEL(sk.level)}</td>
-                        </tr>
-                )})}
+            <table className='software-table'>
+                <tbody>
+                    {softwareKnow.map((sk) => {
+                        return (
+                            <tr key={`software${sk.name}`}>
+                                <td className='software-data'>{sk.name}</td>
+                                <td className='software-data'>{SKILL_LEVEL(sk.level)}</td>
+                            </tr>
+                    )})}
+                </tbody>
             </table>
         </div>
     )

@@ -1,0 +1,23 @@
+.softwares{
+    margin: 15px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.software-table{
+    margin: 0 15%;
+    border: 2px #1d3f72 solid;
+    border-collapse: collapse;
+    line-height: 25px;
+}
+
+.software-data{
+    text-align: left;
+    padding: 10px 0;
+    padding-left: 15px;
+    border-right: 1px #1d3f72 solid;
+}
+
+tr:nth-child(odd) {background: #a4c5d4}
+tr:nth-child(even) {background: #738dda}

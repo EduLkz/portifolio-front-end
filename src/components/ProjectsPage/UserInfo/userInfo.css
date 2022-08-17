@@ -1,12 +1,14 @@
 .user{
     display: flex;
     justify-content: center;
-    margin-top: 35px;
-    margin-bottom: 45px;
+    margin: 0;
+
+    margin: 35px 25% 45px 25%;
 }
 
 .userAvatar{
     width: 200px;
+    height: 200px;
     margin-right: 25px;
     border-radius: 50%;
     box-shadow: 2px 2px 1em #29262681;
@@ -17,11 +19,28 @@
     flex-direction: column;
     margin-top: 15px;
     text-align: left;
+    width: 100%;
 }
 
 .user-info a{
     text-align: right;
     text-decoration: none;
+}
+
+.bio{
+    margin-left: 15px;
+    margin-bottom: 25px;
+}
+
+.login{
+    margin-left: 15px;
+}
+
+.links a{
+    color: #353555;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 span{ margin: 0; }
@@ -30,12 +49,14 @@ h2 { margin: 0; margin-bottom: 10px;}
 @media (max-width: 650px){
     .user{
         flex-direction: column;
-        margin-left: 20%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
 
     .userAvatar{
         margin: 0;
         margin-left: 20%;
+        margin-right: 20%;
     }
 
 }

@@ -4,11 +4,11 @@
 }
 
 .study-list{
+    margin: 0 12%;
     padding: 15px 20px;
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
-    margin: 0;
 }
 
 .study{
@@ -16,12 +16,14 @@
     flex-direction: row;
 
     background-color: #CEA5F0;
-    border: 1px #82649b solid;
+    border: 2px #82649b solid;
     border-radius: 2px;
 
     width: 400px;
+    height: 140px;
+    
     margin: 5px;
-    padding: 10px;
+    padding: 15px;
 }
 
 .study-cover{

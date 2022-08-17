@@ -18,20 +18,24 @@ const MainSkills = () => {
             <h3> Habilidades Principais</h3>
 
             <table className='skills-table'>
-                <tr>
-                    <th className='skills-header'> Habilidade </th>
-                    <th className='skills-header'> Nivel </th>
-                </tr>
-                {
-                    skills.map((s) => {
-                        return (
-                            <tr key={`skill-${s.skill}`}>
-                                <td>{s.skill}</td>
-                                <td>{SKILL_LEVEL(s.level)}</td>
-                            </tr>
-                        )
-                    })
-                }
+                <thead>
+                    <tr>
+                        <th className='skills-header'> Habilidade </th>
+                        <th className='skills-header'> Nivel </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        skills.map((s) => {
+                            return (
+                                <tr key={`skill-${s.skill}`}>
+                                    <td className='skills-data'>{s.skill}</td>
+                                    <td className='skills-data'>{SKILL_LEVEL(s.level)}</td>
+                                </tr>
+                            )
+                        })
+                    }
+                </tbody>
             </table>
         </div>
     );
