@@ -72,12 +72,13 @@
     list-style: none;
     display: flex;
     justify-content: space-between;
-    padding: 0 30%;
+    padding: 0 25%;
     max-width: 400px;
 }
 
 .social img{
     background-color: #557;
+    margin: 0 5px;
     padding: 5px;
     border-radius: 50%;
     cursor: pointer;

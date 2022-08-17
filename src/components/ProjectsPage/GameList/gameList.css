@@ -1,5 +1,5 @@
 .games{
-    height: 100%;
+    min-height: 100%;
     background-color: #f392a2;
 }
 
@@ -51,9 +51,6 @@
     width: 30px;
     height: 30px;
 
-    text-align: center;
-    
-    font-weight: 300;
     cursor: pointer;
     text-decoration: none;
 }
@@ -96,4 +93,53 @@
     .game-list{
         justify-content: center;
     }
+}
+
+@media (max-width: 600px){
+    .game{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        background-color: #57110c;
+        border: 2px #8383ce solid;
+        border-radius: 5px;
+    
+        width: 200px;
+        height: 140px;
+        
+        margin: 5px;
+        padding: 15px;
+    }
+
+    .game-title{
+        margin: 0;
+        text-align: center;
+    }
+    
+    .game-cover{
+        margin: 5px 35%;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .extra-info{
+        text-align: center;
+    }
+
+    .game-description{
+        font-size: 70%;
+    }
+    
+    .game-info .repo-link{
+        margin: 0 42%;
+    }
+
+    .game-info .repo-link img{
+        background-color: #3a3a5a;
+        padding: 5px;
+        border-radius: 50%;
+    }
+
 }

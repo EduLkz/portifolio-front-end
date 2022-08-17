@@ -1,5 +1,6 @@
 .projects, .project-wrapper{
     height: 100%;
+    flex: 1;
 }
 
 .proj-nav{

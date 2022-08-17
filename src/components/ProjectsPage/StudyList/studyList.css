@@ -1,5 +1,5 @@
 .studies{
-    height: 100%;
+    min-height: 100%;
     background-color: #e2a8d8;
 }
 
@@ -96,4 +96,50 @@
     .study-list{
         justify-content: center;
     }
+}
+
+@media (max-width: 600px){
+    .study{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        border-radius: 5px;
+    
+        width: 200px;
+        height: 140px;
+        
+        margin: 5px;
+        padding: 15px;
+    }
+
+    .study-title{
+        margin: 0;
+        text-align: center;
+    }
+    
+    .study-cover{
+        margin: 5px 35%;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+
+    .extra-info{
+        text-align: center;
+    }
+
+    .study-description{
+        font-size: 70%;
+    }
+    
+    .study-info .repo-link{
+        margin: 0 42%;
+    }
+
+    .study-info .repo-link img{
+        padding: 5px;
+        border-radius: 50%;
+    }
+
 }
