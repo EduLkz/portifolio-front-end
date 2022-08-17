@@ -16,6 +16,20 @@ const getAPIdata = async(timeoutDuration) => {
             const data = await response.json();
             
             apidata = data;
+
+            if(apidata.user === []){
+                apidata.user = DefaultResponse.user;
+            }
+            if(apidata.games === []){
+                apidata.games = DefaultResponse.games;
+            }
+            if(apidata.studies === []){
+                apidata.studies = DefaultResponse.studies;
+            }
+            if(apidata.repos === []){
+                apidata.repos = DefaultResponse.repos;
+            }
+
             responseFromApi = true;
         }catch(e){
             console.error('Error trying to get api: ' + e + '\nSending default response');
