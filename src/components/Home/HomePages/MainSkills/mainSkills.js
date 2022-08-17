@@ -15,15 +15,9 @@ const MainSkills = () => {
 
     return (
         <div className='main-skills'>
-            <h3> Habilidades Principais</h3>
+            <h3> Habilidades</h3>
 
             <table className='skills-table'>
-                <thead>
-                    <tr>
-                        <th className='skills-header'> Habilidade </th>
-                        <th className='skills-header'> Nivel </th>
-                    </tr>
-                </thead>
                 <tbody>
                     {
                         skills.map((s) => {
