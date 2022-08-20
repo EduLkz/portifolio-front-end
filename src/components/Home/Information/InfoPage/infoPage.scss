@@ -1,0 +1,152 @@
+$color-front: #3ebb33;
+$color-game: #bb3345;
+
+.info-page{
+    display: flex;
+    flex-direction: column;
+    background-color: #d1cfe2;
+}
+
+.about-me-wrapper{
+    display: flex;
+    height: 90vh;
+    margin: 0 15%;
+
+    align-items: center;
+    text-align: left;
+    
+    .about-me{
+        margin-right: 10%;
+        
+        
+        span{
+            font-size: 120%;
+        }
+        
+        a{
+            color: #299c42;
+            font-weight: bolder;
+            text-decoration: none;
+            cursor: pointer;
+            
+            &:hover{
+                color: #3a299c;
+                letter-spacing: 2px;
+            }
+        }
+        
+        p{
+            margin-right: 2%;
+            text-align: justify;
+        }
+    }
+    
+    .name-frontend{
+        margin: 50px 50px;
+        color: $color-front;
+    }
+    
+    .name-gamedev{
+        margin: 50px 50px;
+        color: $color-game;
+    }
+
+    .pfp{
+        margin-top: 25px;
+        width: 250px;
+        
+        border-radius: 50%;
+        box-shadow: 5px 5px 1em rgba(37, 37, 37, 0.582);
+    }
+}
+
+@keyframes img-hover{
+    from{ transform: rotate(0deg); }
+    to{ transform: rotate(360deg); }
+}
+
+.social{
+    list-style: none;
+    display: flex;
+
+    li{
+        background-color: #3a299c;
+
+        width: 80px;
+        margin: 0 5px;
+        padding: 5px;
+        border-radius: 15px;
+
+        cursor: pointer;
+        text-align: center;
+
+        img{
+            width: 35%;
+            
+        }
+
+        &:hover{
+            background-color: #9c2929;
+
+            img{
+                transform: rotate(360deg);
+                animation: img-hover .5s;
+            }
+        }
+
+        &:active{
+            background-color: #7dc0ff;
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+@media ( max-width: 850px ){
+    .about-me-wrapper{
+        .pfp{
+            width: 150px;
+        }
+    }
+
+    .social{
+    
+        li{
+    
+            width: 50px;
+            margin: 0 5px;
+            padding: 5px;
+            border-radius: 15px;
+        }
+    }
+}
+
+@media ( max-width: 700px ){
+    .about-me-wrapper{
+        height: auto;
+        flex-direction: column-reverse;
+
+        margin: 15%;
+
+        .about-me{
+            margin-top: 50px;
+            margin-right: 10%;
+            
+            span{
+                font-size: 100%;
+            }
+            
+            p{
+                margin: 0;
+                text-align: justify;
+            }
+        }
+
+        .name{
+            font-size: 150%;
+            margin: 0;
+            color: #ca5f5f;
+        }
+    }
+
+}

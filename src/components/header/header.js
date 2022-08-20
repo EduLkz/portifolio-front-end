@@ -1,15 +1,27 @@
 import React from 'react';
-import './header.css'
+import './header.scss'
 import { Link } from 'react-router-dom';
 
-function Header() {
+const Header = ( props ) => {
+
+  const nextPage = props.nextPage;
+  
+  function scrollToTop(){
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+
   return (
-    <div className='Header'>
+    <div className='header'>
         <nav>
-            <li>
-                <ul><Link to='/' className='router-link'>Inicio</Link></ul>
-                <ul><Link to='/projects' className='router-link'>Projetos</Link></ul>
-            </li>
+            <ul>
+                <Link to='/' className='router-link' onClick={() => {scrollToTop()}}>
+                  <li>Voltar</li>
+                </Link>
+                <Link to={`/${nextPage.toLowerCase().replace(' ', '')}`} className='router-link' onClick={() => {scrollToTop()}}>
+                  <li>{nextPage}</li>
+                </Link>
+            </ul>
         </nav>
     </div>
   )

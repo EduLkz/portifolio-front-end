@@ -1,0 +1,40 @@
+.header{
+    position: sticky;
+    top: 0;
+    margin: 0;
+    z-index: 200;
+
+    nav {
+        height: 50px;
+
+        ul{
+            display: flex;
+            background: linear-gradient(180deg, #2c2c31 0%, #222222 100%);
+            list-style: none;
+            margin: 0;
+
+            .router-link{
+                text-decoration: none;
+                color: white;
+            
+                li {
+                    height: 100%;
+                    margin: 0;
+                    padding: 0 25px;
+
+                    line-height: 50px;
+                    
+                    text-align: center;
+                    cursor: pointer;
+
+                    
+
+                }
+
+                &:hover{
+                    background-color: #f3f3f344;
+                }
+            }
+        }
+    }
+}

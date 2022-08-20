@@ -1,0 +1,129 @@
+$skill-color-front: #3ebb33;
+$skill-color-game: #bb3345;
+$cv-downlaod-color: #3d3d66;
+
+.cv-wrapper{
+    width: 100%;
+    margin: 0;
+
+    padding: 100px 0;
+
+    background-color: #353545;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cv{
+    margin: 10px 15%;
+    
+    p{
+        font-weight: bold;
+        color: #f1f1f1;
+    }
+
+}
+
+@mixin cv-button($download-color, $skill-border-color, $extra-color){
+    width: 250px;
+    height: 80px;
+    padding: 15px;
+    margin: 10px;
+    text-align: center;
+
+    background-color: $download-color;
+    border-top: 5px $extra-color solid;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    color: rgb(239, 245, 247);
+    font-weight: 700;
+    font-size: 100%;
+
+    img{
+        margin-right: 15px;
+    }
+
+    &:hover{
+        background-color: $cv-downlaod-color;
+        border-color:$skill-border-color;
+    }
+
+    &:active{
+        background-color: $extra-color;
+        border-color:$cv-downlaod-color;
+        color: rgb(31, 31, 31);
+    }
+}
+
+.cv-download-front{
+    @include cv-button($cv-downlaod-color, $skill-color-front, #00ffc8)
+}
+
+.cv-download-game{
+    @include cv-button($cv-downlaod-color, $skill-color-game, #ff00aa)
+}
+
+.experience{
+    display: flex;
+
+    flex-direction: column;
+}
+
+@mixin skill-wrapper($color){
+    border-bottom: 3px $color solid;
+
+    margin: 0 10% 2em 10%;
+    
+    .skill-title{
+        color: $color;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.486);
+        font-weight: 800;
+        margin-bottom: 2em;
+    }
+    
+    .skills-list{
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        padding: 0;
+    
+        max-height: 30em;
+        margin: 10px 15% 80px 25%;
+    
+        
+    
+        .skill{
+            height: 30px;
+            width: 85px;
+            margin: 10px 25px;
+            padding-left: 8px;
+    
+            border-left: 3px $color solid;
+            
+            color: #d1d1ff;
+            text-align: left;
+        }
+    }
+}
+
+
+.skills-wrapper-front{
+    @include skill-wrapper($skill-color-front);
+}
+
+.skills-wrapper-game{
+    @include skill-wrapper($skill-color-game);
+}
+
+@media ( max-width: 700px ){
+    @mixin skill-wrapper($color){
+
+        .skills-list{
+            margin: 10px 10% 80px 10%;
+        }
+        
+    }
+}

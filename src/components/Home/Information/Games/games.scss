@@ -1,0 +1,166 @@
+$color-game: #bb3345;
+
+.games-wrapper{
+    background-color: #d1cfe2;
+    padding: 150px 0;
+}
+
+.game-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0;
+    margin: 15px 10% 0 10%;
+}
+
+@mixin title-base{
+    text-decoration: none;
+    color: #161618;
+    cursor: pointer;
+    font-size: 100%;
+}
+
+.game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 450px;
+    height: 150px;
+
+    background-color: $color-game;
+    margin: 15px 30px;
+
+    box-shadow: 0 0 1em #00000088;
+
+    .info{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+        width: 100%;
+        height: 80%;
+        text-align: left;
+        
+        margin-left: 25px;
+        margin-right: 10px;
+
+        a{
+            @include title-base;
+
+            &:hover{
+                animation: title-hover .5s forwards;
+            }
+        }
+
+        p{
+            margin: 0;
+        }
+
+        .title{
+            font-size: 150%;
+            font-weight: bolder;
+        }
+
+        .description{
+            font-size: 90%;
+            margin-top: 3px;
+            margin-left: 10px;
+            color: #2b2b2e;
+        }
+
+        .git-code{
+            margin-top: 20px;
+            
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: #d1cfe244;
+            position: relative;
+
+            img {
+                position: absolute;
+                margin: auto;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+            }
+
+            &:hover{
+                background-color: #8bbbf1;
+            }
+        }
+    }
+
+}
+
+.game-link{
+    height: 100%;
+    margin: 0;    
+
+    .cover{
+        height: 100%;
+        filter: grayscale(100%);
+    }
+
+    &:hover{
+        .cover{
+            animation: cover-color .5s forwards;
+        }
+    }
+}
+
+@keyframes cover-color{
+    from { filter: grayscale(100%); }
+    to { filter: grayscale(0%); }
+}
+
+@keyframes title-hover{
+    from { @include title-base }
+    to {
+        color: #60609e;
+        font-size: 105%;
+    }
+}
+
+@media (max-width: 700px) {
+    .game{
+        flex-direction: column;
+
+        height: 370px;
+        width: 300px;
+
+        .info{
+            width: auto;
+            margin: 10px 15px;
+            margin-top: 30px;
+
+            text-align: center;
+            justify-content: center space-between;
+            align-content: center;
+
+            .description{
+                margin-top: 15px;
+                margin-left: 0;
+            }
+
+            .git-code{
+                margin-left: 35%;
+            }
+        }
+
+    }
+
+    .game-link{
+        height: auto;
+        width: 100%;
+        margin: 0;    
+    
+        .cover{
+            width: 100%;
+            filter: grayscale(0%);
+        }
+    
+    }
+}

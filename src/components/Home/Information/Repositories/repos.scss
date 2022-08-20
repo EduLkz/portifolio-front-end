@@ -1,0 +1,106 @@
+.repos-wrapper{
+    background-color: #d1cfe2;
+    padding: 150px 0;
+}
+
+.repo-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0;
+    margin-top: 15px;
+}
+
+.repo-wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+
+    height: 200px;
+    width: 320px;
+    margin: 15px 20px;
+
+    box-shadow: 0 0 1em #0000009d;
+    border-radius: 5px;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    .title{
+        font-weight: bold;
+        font-size: 120%;
+        margin: 0;
+        padding: 0;
+        line-height: 50px;
+
+        background-color: #7cec94;
+        color: #272635;
+
+        border-top: 2px #4c37c7 solid;
+    }
+    
+    .repo-cover{
+        height: 148px;
+        position: relative;
+
+        .repo-options{
+            position: absolute;
+            z-index: 100;
+            margin: 14% 26%;
+            animation: base-options .5s forwards;
+            
+            img{
+                width: 25px;
+                margin: 5px;
+                background-color: #ffffff70;
+                padding: 15px 20px;
+                border-radius: 15px;
+
+                &:hover{
+                    background-color: #48ac4d70;
+                }
+
+                &:active{
+                    background-color: #5ad656fb;
+                }
+            }
+        }
+
+        img{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            filter: grayscale(100%);
+        }
+    }
+
+    &:hover{
+        .repo-cover img{
+            filter: grayscale(0%);
+            background-blend-mode: screen;
+        }
+
+        .repo-options{
+            animation: hover-options .5s forwards;
+        }
+    }
+}
+
+@keyframes hover-options{
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes base-options{
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@media (max-width: 700px){
+    .repo-wrapper{
+        .repo-cover img{
+            filter: grayscale(0%);
+        }
+    }
+}

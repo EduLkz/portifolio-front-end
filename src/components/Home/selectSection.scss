@@ -1,0 +1,147 @@
+$front-end-color: #86df7a;
+$game-dev-color: #df7a7a;
+
+.selectSection{
+    display: flex;
+    height: 100%;
+
+    overflow: hidden;
+}
+
+.button-section {
+    color: #e7e7e7;
+    font-weight: bolder;
+    font-size: 250%;
+
+    margin: 0px;
+
+    width: 100vw;
+    height: 100%;
+
+    border: none;
+
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    line-height: 100vh;
+
+    p{
+        text-shadow: 2px 2px 0 black;
+    }
+
+    img{
+        margin: 0;
+    }
+}
+
+@mixin base-fe {
+    background: url('../../assets/images/frontend.jpg') no-repeat;
+    background-size: cover;
+    background-color: none;
+
+    filter: grayscale(100%);
+    transform: scale(1);
+}
+
+@mixin hover-fe {
+    background-color: $front-end-color;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    font-size: 225%;
+}
+
+@keyframes base-front-end{
+    from{
+        @include hover-fe;
+    }
+    to{
+        @include base-fe;
+    }
+}
+
+@keyframes hover-front-end{
+    from{
+        @include base-fe;
+    }
+    to{
+        @include hover-fe;
+    }
+}
+
+.front-end-section{
+    @include base-fe;
+    background-blend-mode: multiply;
+
+    animation-name: base-front-end;
+    animation-duration: .5s;
+
+    &:hover{ 
+        @include hover-fe;
+    
+        animation-name: hover-front-end;
+        animation-duration: .5s;
+    }
+}
+
+@mixin base-dg {
+    background: url('../../assets/images/controller.jpg') no-repeat;
+    background-size: cover;
+    background-color: none;
+
+    filter: grayscale(100%);
+    transform: scale(1);
+}
+
+@mixin hover-dg {
+    background-color: $game-dev-color;
+    filter: grayscale(0%);
+    transform: scale(1.1);
+    font-size: 225%;
+}
+
+@keyframes base-game-dev{
+    from{
+        @include hover-dg;
+    }
+    to{
+        @include base-dg;
+    }
+}
+
+@keyframes hover-game-dev{
+    from{
+        @include base-dg;
+    }
+    to{
+        @include hover-dg;
+    }
+}
+
+.game-dev-section{
+    @include base-dg;
+    background-blend-mode: multiply;
+
+    animation-name: base-game-dev;
+    animation-duration: .5s;
+
+    &:hover{ 
+        @include hover-dg;
+    
+        animation-name: hover-game-dev;
+        animation-duration: .5s;
+    }
+}
+
+@media (max-width: 700px) {
+    .selectSection{
+        display: flex;
+        flex-direction: column;
+
+    }
+    .button-section {
+        width: 100%;
+        height: 50vh;
+
+        line-height: 50vh;
+    }
+}

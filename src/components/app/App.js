@@ -2,44 +2,35 @@ import './App.css';
 
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { getAPIdata, getDefaultResponse } from '../../Services/api/api';
-
-import Header from '../Header/header';
-import Home from '../Home/home';
-import ProjectsPage from '../ProjectsPage/projectsPage';
-
+import { getData } from '../../Services/Data/getData';
+import FrontEndHome from '../Home/FrontEndHome/frontEndHome';
+import GameDevHome from '../Home/GameDevHome/gameDevHome';
+import SelectSection from '../Home/selectSection';
 
 function App() {
 
-  const [apiData, setApiData] = useState(getDefaultResponse);
-
-  
+  const [jsonData, setJsonData] = useState(getData());
 
   useEffect(() => {
-    const waitForApi = async() => {
-      if(!apiData){
-        const apireturn = await getAPIdata(5000);
-        setApiData(apireturn);
+    const waitForData = () => {
+      if(!jsonData){
+        const jsonreturn = getData();
+        setJsonData(jsonreturn);
       }
     }
-    
-    waitForApi();
-  }, [apiData])
+
+    waitForData();
+  }, [jsonData])
 
   return (
     <Router>
+      {console.log(typeof section)}
       <div className="App">
-        <Header/>
-
-        <div className='content'>
-          <Switch>
-            <Route exact path='/'> <Home /> </Route>
-            <Route path='/projects'> <ProjectsPage data={apiData}/> </Route>
-          </Switch>
-          
-        </div>
-
-        
+        <Switch>
+          <Route exact path='/'><SelectSection/></Route>
+          <Route exact path='/frontend'><FrontEndHome {...jsonData}/></Route>
+          <Route exact path='/gamedev'><GameDevHome {...jsonData}/></Route>
+        </Switch>
       </div>
     </Router>
   );
