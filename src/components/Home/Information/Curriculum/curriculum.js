@@ -5,6 +5,12 @@ function Curriculum( props ) {
 
     const { extraClass, skills } = props;
 
+    const cvUrl = '/assets/CV - Eduardo Almeida Rocha.pdf'
+
+    function downloadCV(){
+        window.open(cvUrl);
+    }
+
     return (
         <div className={`cv-wrapper`}>
             <div className={`skills-wrapper-${extraClass}`}>
@@ -22,7 +28,7 @@ function Curriculum( props ) {
             </div>
             <div className="cv">
                 <p>Para mais informações recomendo baixar meu CV</p>
-                <button className={`cv-download-${extraClass}`}>
+                <button className={`cv-download-${extraClass}`} onClick={downloadCV}>
                     <img src='./assets/images/download.svg' alt='baixar cv'/>
                     <span>Baixar CV</span>
                 </button>

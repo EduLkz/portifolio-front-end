@@ -21,6 +21,7 @@ $cv-downlaod-color: #3d3d66;
     p{
         font-weight: bold;
         color: #f1f1f1;
+        margin-bottom: 35px;
     }
 
 }
@@ -40,6 +41,8 @@ $cv-downlaod-color: #3d3d66;
     color: rgb(239, 245, 247);
     font-weight: 700;
     font-size: 100%;
+
+    cursor: pointer;
 
     img{
         margin-right: 15px;
