@@ -33,6 +33,8 @@ $color-game: #bb3345;
 
     box-shadow: 0 0 1em #00000088;
 
+    transition: transform 500ms ease-in-out;
+
     .info{
         display: flex;
         flex-direction: column;
@@ -44,6 +46,8 @@ $color-game: #bb3345;
         
         margin-left: 25px;
         margin-right: 10px;
+
+        
 
         a{
             @include title-base;
@@ -93,6 +97,9 @@ $color-game: #bb3345;
         }
     }
 
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 
 .game-link{

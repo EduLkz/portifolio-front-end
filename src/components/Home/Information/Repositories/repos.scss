@@ -27,6 +27,8 @@
     cursor: pointer;
     text-decoration: none;
 
+    transition: transform 500ms ease-in-out;
+
     .title{
         font-weight: bold;
         font-size: 120%;
@@ -48,7 +50,8 @@
             position: absolute;
             z-index: 100;
             margin: 14% 26%;
-            animation: base-options .5s forwards;
+            transition: opacity .5s ease-in-out;
+            opacity: 0;
             
             img{
                 width: 25px;
@@ -72,29 +75,23 @@
             width: 100%;
             margin: 0;
             filter: grayscale(100%);
+
+            transition: filter .5s ease-in-out;
         }
     }
 
     &:hover{
+        transform: scale(1.1);
+        
         .repo-cover img{
             filter: grayscale(0%);
             background-blend-mode: screen;
         }
 
         .repo-options{
-            animation: hover-options .5s forwards;
+            opacity: 1;
         }
     }
-}
-
-@keyframes hover-options{
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes base-options{
-    from { opacity: 1; }
-    to { opacity: 0; }
 }
 
 @media (max-width: 700px){

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Repo = ( props ) => {
     
-    const { title, url, cover } = props.repo;
+    const { title, url, cover, live_view } = props.repo;
 
     return (
         <div className="repo">
@@ -12,7 +12,7 @@ const Repo = ( props ) => {
                         <a href={url} target='_blank' rel='noreferrer'>
                             <img src='./assets/images/code.svg' alt='view code'/>
                         </a>
-                        <a >
+                        <a href={live_view} target='_blank' rel='noreferrer'>
                             <img src='./assets/images/live-view.svg' alt='live view'/>
                         </a>
                     </div>

@@ -41,6 +41,8 @@ $game-dev-color: #df7a7a;
 
     filter: grayscale(100%);
     transform: scale(1);
+
+    transition: all 500ms ease-in-out;
 }
 
 @mixin hover-fe {
@@ -48,38 +50,16 @@ $game-dev-color: #df7a7a;
     filter: grayscale(0%);
     transform: scale(1.1);
     font-size: 225%;
-}
 
-@keyframes base-front-end{
-    from{
-        @include hover-fe;
-    }
-    to{
-        @include base-fe;
-    }
-}
-
-@keyframes hover-front-end{
-    from{
-        @include base-fe;
-    }
-    to{
-        @include hover-fe;
-    }
+    
 }
 
 .front-end-section{
     @include base-fe;
     background-blend-mode: multiply;
 
-    animation-name: base-front-end;
-    animation-duration: .5s;
-
     &:hover{ 
         @include hover-fe;
-    
-        animation-name: hover-front-end;
-        animation-duration: .5s;
     }
 }
 
@@ -90,6 +70,8 @@ $game-dev-color: #df7a7a;
 
     filter: grayscale(100%);
     transform: scale(1);
+
+    transition: all 500ms ease-in-out;
 }
 
 @mixin hover-dg {
@@ -99,36 +81,11 @@ $game-dev-color: #df7a7a;
     font-size: 225%;
 }
 
-@keyframes base-game-dev{
-    from{
-        @include hover-dg;
-    }
-    to{
-        @include base-dg;
-    }
-}
-
-@keyframes hover-game-dev{
-    from{
-        @include base-dg;
-    }
-    to{
-        @include hover-dg;
-    }
-}
-
 .game-dev-section{
     @include base-dg;
-    background-blend-mode: multiply;
-
-    animation-name: base-game-dev;
-    animation-duration: .5s;
-
+    
     &:hover{ 
         @include hover-dg;
-    
-        animation-name: hover-game-dev;
-        animation-duration: .5s;
     }
 }
 

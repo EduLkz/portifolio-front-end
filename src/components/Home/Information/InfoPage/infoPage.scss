@@ -89,8 +89,7 @@ $color-game: #bb3345;
             background-color: #9c2929;
 
             img{
-                transform: rotate(360deg);
-                animation: img-hover .5s;
+                animation: img-hover .5s ease forwards;
             }
         }
 
