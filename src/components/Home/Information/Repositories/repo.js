@@ -12,13 +12,14 @@ const Repo = ( props ) => {
                         <a href={url} target='_blank' rel='noreferrer'>
                             <img src='./assets/images/code.svg' alt='view code'/>
                         </a>
+                        {live_view.length > 3 &&
                         <a href={live_view} target='_blank' rel='noreferrer'>
                             <img src='./assets/images/live-view.svg' alt='live view'/>
                         </a>
+                        }
                     </div>
                     <img  src={cover} alt={`project ${title} cover`} />
                 </div>
-                {/* <p className="description">{description}</p> */}
                 <p className="title">
                         {title}
                 </p>
