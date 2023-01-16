@@ -15,7 +15,9 @@ const FrontEndHome = ({ repos }) => {
     "Java",
     "ReactJs",
     "React Native",
-    "NodeJS"
+    "NodeJS",
+    "Firebase",
+    "SASS"
   ]
 
   return (
